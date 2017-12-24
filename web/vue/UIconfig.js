@@ -18,6 +18,12 @@ const CONFIG = {
   adapter: 'sqlite'
 };
 
+if(typeof window === 'undefined')
+  module.exports = CONFIG;
+else
+  window.CONFIG = CONFIG;
+
+
 //
 // const CONFIG = {
 //   headless: false,
@@ -35,7 +41,3 @@ const CONFIG = {
 //   adapter: 'sqlite'
 // }
 //
-// if(typeof window === 'undefined')
-//   module.exports = CONFIG;
-// else
-//   window.CONFIG = CONFIG;
